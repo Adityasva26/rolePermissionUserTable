@@ -9,15 +9,14 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'], // Add any other roles as needed
     // required: true,
   },
-  permissions: {
-    type: Map,
-    of: {
+  permissions: 
+    {
       read: Boolean,
       write: Boolean,
       update: Boolean,
       delete: Boolean,
     },
-  },
+  
 });
 
 const User = mongoose.model('User', userSchema);
